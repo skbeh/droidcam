@@ -17,8 +17,6 @@ JPEG_INCLUDE ?= $(JPEG_DIR)/include
 JPEG_LIB     ?= $(JPEG_DIR)/lib`getconf LONG_BIT`
 
 
-CC   = gcc
-CFLAGS = -Wall -O2
 GTK   = `pkg-config --libs --cflags gtk+-3.0` `pkg-config --libs x11`
 GTK  += `pkg-config --libs --cflags $(APPINDICATOR)`
 LIBAV = `pkg-config --libs --cflags libswscale libavutil`

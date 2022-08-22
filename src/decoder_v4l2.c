@@ -49,7 +49,7 @@ int find_v4l2_device(const char* bus_info) {
     struct v4l2_capability v4l2cap;
 
     dbgprint("Looking for v4l2 card: %s\n", bus_info);
-    for (video_dev_nr = 0; video_dev_nr < 99; video_dev_nr++) {
+    for (video_dev_nr = 1; video_dev_nr < 99; video_dev_nr++) {
         snprintf(v4l2_device, sizeof(v4l2_device), "/dev/video%d", video_dev_nr);
 
         video_dev_fd = open_v4l2_device();
